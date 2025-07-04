@@ -305,6 +305,7 @@ document.getElementById("complete").onclick = () => {
     document.getElementById("kvestTitle").innerHTML = kvest;
     document.getElementById("kvestPrize").innerHTML = Math.round(prizer);
     document.getElementById("money").innerHTML = money.toFixed(2);
+    document.getElementById("kvestPrize").innerHTML = Math.round(mone);
   } else {
     document.getElementById("money").innerHTML = money.toFixed(2);
     document.getElementById("kvestTitle").innerHTML = `клікнути ${
@@ -312,7 +313,6 @@ document.getElementById("complete").onclick = () => {
     } раз`;
     document.getElementById("kvestPrize").innerHTML = `${Math.round(prizer)}$`;
   }
-  document.getElementById("kvestPrize").innerHTML = Math.round(mone);
 };
 let baseClick = 1;
 

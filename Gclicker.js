@@ -13,10 +13,11 @@ function formator(item) {
   }
   return priceText;
 }
+let clicker = false;
 
 let arr = [];
 
-let num = 100;
+let num = 3000;
 let lvl = 0;
 let price = 100;
 const number = document.getElementById("number");
@@ -52,28 +53,43 @@ const funkli = () => {
   return result;
 };
 
+const byClicker = () => {
+  if (num >= 3000 && clicker === false) {
+    clicker = true;
+    num -= 3000;
+    Transaction("Auto-clicker", "-3000");
+  } else console.error();
+};
+
+function Transaction(title, price) {
+  const now = new Date();
+
+  arr.push({
+    time: `${now.getHours()}:${now.getMinutes()}`,
+    title: title,
+    price: price,
+  });
+}
+
 const levelUp = () => {
   let object = false;
-  const now = new Date();
   if (num >= price) {
     lvl++;
     num -= price;
     object = {
-      time: `${now.getHours()}:${now.getMinutes()}`,
-
       title: `${lvl}Lvl`,
       price: -price,
     };
     console.log(1, -price);
     (price *= 1.05).toFixed(1);
   }
-  if (object) arr.push(object);
+  if (object) Transaction(object.title, object.price);
   // console.log(arr);
   reload();
 };
 
-const funk = () => {
-  num += lvl;
+const funk = (x) => {
+  num += x || lvl;
 
   reload();
 };
@@ -83,3 +99,9 @@ const clearArr = () => {
   reload();
 };
 alert("Для початку натисніть кнопку +1");
+
+setInterval(() => {
+  if (clicker) funk(1);
+  // reload();
+}, 1000);
+setTimeout(reload, 10000);
