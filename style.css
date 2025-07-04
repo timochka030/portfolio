@@ -127,6 +127,14 @@ body > * {
     width: 50%;
   }
 }
+.btn__game--back {
+  background-color: rgb(116, 116, 116);
+  padding: 10px;
+  border-radius: 10px;
+  height: fit-content;
+  text-decoration: none;
+  color: white;
+}
 
 @media all and (width<= 500px) {
   .header__logo {

@@ -1,0 +1,35 @@
+.main {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.game__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.game__card {
+  color: #454549;
+  text-decoration: none;
+  display: flex;
+  background-color: rgb(190, 190, 190);
+}
+.game__card:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.game__card--image {
+  max-width: 200px;
+}
+.game__card--title {
+  font-size: xx-large;
+}
+.game__card--text {
+  padding: 10px;
+}
+.game__card--description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px;
+}

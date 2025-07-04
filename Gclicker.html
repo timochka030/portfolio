@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="favicon-32x32.png" />
+    <link rel="stylesheet" href="Gclicker.css" />
+    <title>Clicker</title>
+  </head>
+  <body>
+    <!-- <header class="header" id="navbar"></header> -->
+    <main class="main">
+      <a href="Games.html" class="btn__game--back">Назад</a>
+
+      <h1>Clicker</h1>
+      <div class="game__window">
+        <div>
+          <div style="display: flex; font-size: 30px">
+            <h1 id="number">100</h1>
+            <img src="./sun.svg" alt="" width="20px" />
+          </div>
+
+          <div>
+            <h2 style="display: flex">
+              x
+              <div id="lvl">0</div>
+            </h2>
+            <progress id="line" max="100"></progress>
+            <h4 style="display: flex">
+              Ціна:
+              <div id="price">100</div>
+              <img src="./sun.svg" alt="" width="20px" />
+            </h4>
+            <button class="btn__game" onclick="levelUp()">+1</button>
+            <!-- <button class="btn__game" onclick="levelUp(true)">maxLVL</button> -->
+          </div>
+
+          <button
+            onclick="funk()"
+            style="border: none; border-radius: 100%; background: none"
+          >
+            <img class="btn__game__img" src="./sun.svg" alt="" />
+          </button>
+        </div>
+
+        <div id="console">
+          <div>
+            <i>Transactions</i>
+            <button class="btn__game" onclick="clearArr()">clear</button>
+          </div>
+          <div>
+            <div>Час</div>
+            <div style="color: red">Ціна</div>
+            <div style="color: green">+LVL</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- <footer class="footer" id="footerbar"></footer> -->
+
+    <script src="script.js"></script>
+    <script src="./Gclicker.js"></script>
+  </body>
+</html>
