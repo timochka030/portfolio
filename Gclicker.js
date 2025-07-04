@@ -17,7 +17,7 @@ let clicker = false;
 
 let arr = [];
 
-let num = 3000;
+let num = 100;
 let lvl = 0;
 let price = 100;
 const number = document.getElementById("number");
