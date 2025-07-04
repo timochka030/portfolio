@@ -57,7 +57,7 @@ const byClicker = () => {
   if (num >= 3000 && clicker === false) {
     clicker = true;
     num -= 3000;
-    Transaction("Auto-clicker", "-3000");
+    Transaction("Auto-clicker", 3000);
   } else console.error();
 };
 
@@ -67,7 +67,7 @@ function Transaction(title, price) {
   arr.push({
     time: `${now.getHours()}:${now.getMinutes()}`,
     title: title,
-    price: price,
+    price: formator(price),
   });
 }
 
