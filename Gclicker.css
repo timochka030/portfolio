@@ -4,7 +4,7 @@
 
 .game__window {
   display: flex;
-  /* flex-direction: column; */
+
   gap: 20px;
   background-color: aliceblue;
   padding: 10px;
@@ -51,7 +51,7 @@
 }
 #console {
   padding: 20px;
-  width: 300px;
+
   background-color: #454549;
   color: white;
   height: 600px;
@@ -65,21 +65,26 @@
 }
 
 #line {
-  width: 280px;
+  min-width: 250px;
+  max-width: 280px;
 }
 
 .game__header {
   display: flex;
 }
 
-@media all and (width>=300px) {
+@media all and (width>=320px) {
   .game__window {
+    align-items: center;
     flex-direction: column;
   }
   .game__header {
     position: absolute;
     top: 10px;
     left: 10px;
+  }
+  .game__window > div {
+    padding: 10px;
   }
 }
 @media all and (width>=580px) {
