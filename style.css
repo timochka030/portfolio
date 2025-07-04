@@ -136,6 +136,11 @@ body > * {
   color: white;
 }
 
+.game__header {
+  display: flex;
+  z-index: 1;
+}
+
 @media all and (width<= 500px) {
   .header__logo {
     font-size: 18px;
@@ -160,6 +165,11 @@ body > * {
   }
   .card__img {
     width: 240px;
+  }
+  .game__header {
+    position: absolute;
+    top: 10px;
+    left: 10px;
   }
 }
 @media all and (width> 620px) {
@@ -190,6 +200,12 @@ body > * {
   }
   .card__img {
     width: 300px;
+  }
+
+  .game__header {
+    position: absolute;
+    top: 30px;
+    left: 20px;
   }
 }
 @media all and (width>= 1080px) {

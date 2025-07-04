@@ -21,6 +21,15 @@
 
 .game__card--image {
   max-width: 200px;
+  background-color: rgb(247, 244, 244);
+
+  margin: 5px;
+  padding: 0px;
+  transition: 0.1s;
+}
+.game__card:hover > .game__card--image {
+  padding: 5px;
+  margin: 0px;
 }
 .game__card--title {
   font-size: xx-large;

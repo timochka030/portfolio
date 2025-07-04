@@ -1,0 +1,285 @@
+#my-btn {
+  padding: 10px;
+  background: #888888;
+  border-radius: 50px;
+  width: 200px;
+  min-height: 200px;
+}
+#my-btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.4s;
+}
+#my-btn:active {
+  opacity: 0.4;
+}
+body {
+  /* position: fixed; */
+  margin: 0px;
+  user-select: none;
+  scroll-behavior: smooth;
+  min-width: 320px;
+  min-height: 700px;
+  overflow: hidden;
+}
+
+.window {
+  min-width: 320px;
+  min-height: 700px;
+}
+
+.game {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  /* align-items: center; */
+  justify-content: center;
+  gap: 10px;
+  padding-top: 30px;
+}
+
+.game__block {
+  background: #00fdb9;
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  align-items: center;
+  justify-content: space-evenly;
+  min-width: 320px;
+  height: fit-content;
+  padding: 5px;
+}
+
+.game__elem {
+  width: 40px;
+  display: flex;
+  /* gap: 1px; */
+  align-items: center;
+  font-size: 10px;
+  img {
+    border-radius: 10px;
+    width: 15px;
+  }
+}
+
+.game__elem:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.defend {
+  display: flex;
+  justify-content: center;
+  background: #adc800;
+}
+
+.level {
+  color: rgb(0, 0, 0);
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* position: absolute;  */
+  /* top: 40px;
+  left: 10px; */
+  padding: 5px;
+  width: 100px;
+  height: 120px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  transition: 2s;
+  #error {
+    color: red;
+    font-size: 16px;
+    font-weight: 200;
+    transition: 2s;
+  }
+}
+
+.energy_position {
+  color: rgb(0, 0, 0);
+  display: flex;
+  gap: 5px;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px;
+  width: 220px;
+  height: 100px;
+
+  /* border-radius: 10px; */
+  transition: 2s;
+  #error {
+    color: red;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 2s;
+  }
+}
+
+.energy {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#error,
+#errorE {
+  max-height: 20px;
+}
+
+.kvest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+#kvestTitle {
+  font-size: 18px;
+  width: 100px;
+  font-weight: 100;
+  word-break: break-all;
+}
+.home {
+  display: flex;
+  justify-content: center;
+  background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ-vbXGo6SvRPa7FBXQ0J0BSGwoDw5jAAvdPJpk2-bxgoia1WJX");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 700px;
+  min-width: 320px;
+
+  background-position: center;
+  #im {
+    position: relative;
+    top: 280px;
+    right: 40px;
+    width: 80px;
+    border: 1px solid gray;
+    border-radius: 30px;
+    height: fit-content;
+    font-size: 15px;
+    background: white;
+    padding: 10px;
+  }
+
+  #mom {
+    position: relative;
+    top: 290px;
+    left: 60px;
+    width: 80px;
+
+    border: 1px solid gray;
+    border-radius: 30px;
+    height: fit-content;
+    font-size: 15px;
+    background: white;
+    padding: 10px;
+  }
+
+  #less {
+    position: absolute;
+    top: 1100px;
+    left: 10px;
+    height: fit-content;
+    font-size: 20px;
+  }
+}
+
+.mini__nav-for--id {
+  position: sticky;
+  z-index: 2;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  bottom: 10px;
+}
+.mini__nav-for--id__img {
+  width: 50px;
+  height: 50px;
+  border-radius: 20px;
+  /* padding: 10px; */
+}
+
+.structures {
+  img {
+    background: transparent;
+    width: 320px;
+    min-height: 700px;
+  }
+}
+
+.base:active {
+  background: #0000002d;
+}
+
+.priceBaseUpgrade {
+  color: yellow;
+  position: absolute;
+  top: 1500px;
+  left: 80px;
+}
+
+#baseLv {
+  display: flex;
+  position: absolute;
+  top: 1500px;
+  left: 10px;
+  padding: 20px;
+  border-radius: 100%;
+  width: fit-content;
+  background: yellow;
+}
+
+.byPeople {
+  color: yellow;
+  position: absolute;
+  top: 1570px;
+  left: 20px;
+}
+
+.byPeopleShahta {
+  display: flex;
+  flex-direction: column;
+}
+
+@media all and (width>=20px) {
+  .game,
+  body,
+  .window,
+  .game__block {
+    width: 100%;
+  }
+}
+@media all and (width>=500px) {
+  .game {
+    padding-top: 50px;
+  }
+  .mini__nav-for--id__img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .game__elem {
+    font-size: 18px;
+    img {
+      width: 30px;
+    }
+  }
+  .level,
+  .kvest {
+    font-size: 20px;
+    width: 200px;
+  }
+  #kvestTitle {
+    font-size: 25px;
+    width: 180px;
+  }
+  .energy_position {
+    font-size: 30px;
+    width: 400px;
+    height: fit-content;
+  }
+}

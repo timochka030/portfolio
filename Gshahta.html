@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Шахта</title>
+    <link rel="stylesheet" href="Gshahta.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game__header">
+      <a href="Games.html" class="btn__game--back">Назад</a>
+      <h6>Шахта</h6>
+    </div>
+    <div class="window" id="shahta">
+      <div class="game__block">
+        <div
+          class="game__elem"
+          style="color: yellow; cursor: auto; opacity: none"
+        >
+          <img
+            src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQFXKDLJJLtTOKq8E5FYxmy-SogxQzJwF18EWL6PXuPKLTHGzgU"
+            alt=""
+          />
+          <div id="money" style="color: yellow; font-weight: 600">0.00</div>
+          $
+        </div>
+        <div class="game__elem" id="metallBlock">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHBUKeggxBY_IQemgU81RtzpKCF9dyp6825odTSQ-HmfpJTJYS"
+            alt=""
+          />
+          <div id="metall">0.00</div>
+        </div>
+        <div class="game__elem" id="aluminiyBlock">
+          <img
+            src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTS2t52PBa3tR92htlAYW1lFu4BDqimRjWVOQ6DhxEVDxHhhHG_"
+            alt=""
+          />
+          <div id="aluminiy">0.00</div>
+        </div>
+        <div class="game__elem" id="midBlock">
+          <img
+            src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTYOFUahsB1V_lJUDTruKXX63rorJuIl_jJo2HMZFfzv82mU1xa"
+            alt=""
+          />
+          <div id="mid">0.00</div>
+        </div>
+        <div class="game__elem" id="zolotoBlock">
+          <img
+            src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTP_aUte52p35_csBwABQMNI68aLa4V2PzWqC3m_ynJLlFQmEN2"
+            alt=""
+          />
+          <div id="zoloto">0.00</div>
+        </div>
+      </div>
+      <div class="game">
+        <div class="level">
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+
+              border-bottom: 1px solid grey;
+            "
+          >
+            <div style="font-size: 26px">LVL:</div>
+            <div style="font-size: 24px" id="level">1</div>
+          </div>
+
+          <div style="min-width: 100px">
+            to upgrade
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <div id="price">1000</div>
+              $
+            </div>
+          </div>
+          <div id="error"></div>
+
+          <button id="levelUp">Upgrade</button>
+        </div>
+        <div class="level">
+          <div class="kvest" id="kvest">
+            <div id="kvestTitle">Для отримання завдання натисніть кнопку</div>
+            <div id="kvestPrize" style="color: rgb(0, 255, 0)"></div>
+            <button id="complete">Отримати</button>
+          </div>
+        </div>
+
+        <div class="energy_position">
+          <div style="display: grid">
+            <div class="energy">
+              <div>Енергія:</div>
+              <div style="display: flex">
+                <div id="energy">100</div>
+                <img
+                  width="20px"
+                  src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSADz9pOLXwJyMKbDAsviBrPqi-RDTmgDRiCknLU6k_lHqIGbtN"
+                />
+              </div>
+            </div>
+            <div>
+              10<img
+                width="25px"
+                src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSADz9pOLXwJyMKbDAsviBrPqi-RDTmgDRiCknLU6k_lHqIGbtN"
+              />
+              / 50$
+            </div>
+            <div style="color: red; font-size: 10px" id="errorE"></div>
+
+            <button id="byEnergy">
+              Купити 10<img
+                width="15px"
+                src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSADz9pOLXwJyMKbDAsviBrPqi-RDTmgDRiCknLU6k_lHqIGbtN"
+                alt=""
+              />
+            </button>
+            <button id="byEnergy2">
+              100<img
+                width="15px"
+                src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSADz9pOLXwJyMKbDAsviBrPqi-RDTmgDRiCknLU6k_lHqIGbtN"
+                alt=""
+              />
+            </button>
+            <button id="byEnergy3">
+              1000<img
+                width="15px"
+                src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSADz9pOLXwJyMKbDAsviBrPqi-RDTmgDRiCknLU6k_lHqIGbtN"
+                alt=""
+              />
+            </button>
+          </div>
+
+          <div
+            class="byPeopleShahta"
+            style="display: flex; gap: 10px; height: 25px"
+          >
+            <div style="display: flex; gap: 10px">
+              <div id="peopleListShahta">0</div>
+              <button style="height: 20px" id="buyPeopleShahta">Найняти</button>
+            </div>
+            <div style="display: flex; gap: 10px">
+              <div id="speed">0</div>
+              <button disabled style="height: 20px" id="buySpeed">
+                Прискорити
+              </button>
+            </div>
+          </div>
+          <div
+            class="byPeopleShahta"
+            style="display: flex; gap: 10px; height: 25px"
+          ></div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center">
+        <h1 id="result">Натисніть на шахту</h1>
+        <img
+          id="my-btn"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTvYRypSs6Zsa6kjNnpYTrcth1540YCzP3EAZ_GAEhRppDMtuS"
+          alt=""
+        />
+        <div
+          style="
+            display: flex;
+            /* background: #ffea00; */
+            position: relative;
+            bottom: 240px;
+            left: 150px;
+            width: 80px;
+
+            /* border-radius: 30px; */
+          "
+        >
+          X
+          <div id="level2" style="font-size: 50px">1</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="home window" id="moms">
+      <button id="less">Попросити грошей</button>
+
+      <div id="im"></div>
+      <div id="mom"></div>
+    </div>
+
+    <div class="defend window" id="defend">
+      <div class="structures">
+        <div class="byPeople" style="display: flex; gap: 10px; height: 25px">
+          <div id="peopleList">0</div>
+          <button style="height: 20px" id="buyPeople">
+            Найняти робітника +1
+          </button>
+        </div>
+        <div class="priceBaseUpgrade">
+          <div style="display: flex">
+            Покращити:
+            <div id="priceBaseUpgrade">10000</div>
+            $
+          </div>
+          <button id="upgrade" type="button">Покращити +1</button>
+        </div>
+        <div id="baseLv">
+          +
+          <div id="baseLvl">1</div>
+        </div>
+
+        <map name="base">
+          <area
+            id="base"
+            shape="poly"
+            coords="90,270,150,202,260,275,180,357"
+            href="#defend"
+            alt="base"
+          />
+          <!-- <area
+              id="upgrade"
+              shape="poly"
+              coords="110,140,170,90,340,230,270,290"
+              href="#upgrade"
+              alt="upgrade"
+            /> -->
+        </map>
+        <img
+          usemap="#base"
+          src="https://lh7-rt.googleusercontent.com/drawingsz/AHiSRb13EJ1-_UPeegICYbF5i2lOQaHugMnku1munyS-es8YpC_AQASpzNWZfUwSGWIEpEmuiDG7IiGzEPmA0doyyKF2RnhcD931nckEaZtzqcHFcaTrqF0xjBk5haXQmZys0Vvx-7qz?key=KSQDIGy3LMtGNYK43xueK0j8"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="mini__nav-for--id">
+      <a href="#shahta"
+        ><img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTvYRypSs6Zsa6kjNnpYTrcth1540YCzP3EAZ_GAEhRppDMtuS"
+          alt=""
+          class="mini__nav-for--id__img"
+      /></a>
+      <a href="#moms"
+        ><img
+          src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ-vbXGo6SvRPa7FBXQ0J0BSGwoDw5jAAvdPJpk2-bxgoia1WJX"
+          alt=""
+          class="mini__nav-for--id__img"
+      /></a>
+      <a href="#defend"
+        ><img
+          src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSgboPIjNn2bL0Z8Iqw075YiQN0w2VEG7HZUKfF47VPuXIx2OFp"
+          alt=""
+          class="mini__nav-for--id__img"
+      /></a>
+    </div>
+
+    <!-- <div id="i">i</div> -->
+    <script src="Gshahta.js"></script>
+  </body>
+</html>
