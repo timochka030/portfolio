@@ -1,0 +1,137 @@
+* {
+  transition: 0.3s;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+.game__window {
+  width: 100%;
+  height: 100vh;
+  /* background: #acacac; */
+  border-bottom: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game__play--header {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  /* background-color: #fa000068; */
+  padding: 10px;
+  font-size: 28px;
+  border-bottom: 1px solid grey;
+}
+.game__play--header__item {
+  display: flex;
+}
+.game__play--header__item {
+  cursor: pointer;
+  /* background-color: #acacac; */
+  padding: 5px;
+
+  img {
+    height: 30px;
+    width: auto;
+    border-radius: 100%;
+  }
+}
+.game__play--header__item:last-child {
+  cursor: default;
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+}
+.game__play--header__item > div {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.land {
+  width: 1200px;
+  height: 800px;
+  padding: 20px;
+  background-color: rgb(213, 181, 181);
+  display: flex;
+  position: relative;
+  border-bottom: 40px ridge grey;
+}
+#baseA,
+#baseB {
+  position: absolute;
+  border: 10px ridge blue;
+}
+
+#baseA > .base__block,
+#baseB > .base__block {
+  /* background: grey; */
+  width: 100px;
+  height: 100px;
+
+  border-bottom: 10px ridge blue;
+  background-image: url("ladder.svg");
+  background-size: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  background-position: 0px;
+}
+#baseA {
+  bottom: 0px;
+  left: 20px;
+
+  div {
+    /* background-position: 100px; */
+  }
+}
+#baseB {
+  bottom: 0px;
+  right: 20px;
+}
+#personA {
+  background-color: green;
+
+  position: absolute;
+  height: 90px;
+  left: 20px;
+  width: 50px;
+  bottom: 0px;
+}
+#personB {
+  background-color: brown;
+
+  position: absolute;
+  height: 90px;
+  right: 20px;
+  width: 50px;
+  bottom: 0px;
+}
+
+.controls {
+  position: absolute;
+  bottom: 100px;
+  left: 100px;
+  z-index: 100;
+  font-size: 40px;
+  div {
+    height: 40px;
+    width: 40px;
+    color: aliceblue;
+    padding: 10px;
+    cursor: pointer;
+    background-color: blueviolet;
+    border-radius: 100%;
+  }
+}
+
+.controlsB {
+  right: 100px;
+}

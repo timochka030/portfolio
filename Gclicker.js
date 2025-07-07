@@ -105,3 +105,7 @@ setInterval(() => {
   // reload();
 }, 1000);
 setTimeout(reload, 10000);
+
+// setTimeout(() => {
+//   alert("Ви людина?");
+// }, 60000);

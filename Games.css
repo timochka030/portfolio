@@ -9,6 +9,7 @@
   justify-items: center;
 }
 .game__card {
+  z-index: 10;
   color: #454549;
   text-decoration: none;
   display: flex;

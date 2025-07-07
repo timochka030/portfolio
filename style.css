@@ -62,7 +62,7 @@ body > * {
   background-color: var(--backgroundGreyLight);
   min-height: 500px;
 
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 /* ------------ */
@@ -102,6 +102,7 @@ body > * {
   animation-duration: 600ms;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  z-index: 1000;
 }
 
 .footer__box {
