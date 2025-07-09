@@ -1,5 +1,5 @@
 * {
-  transition: 0.3s;
+  /* transition: 0.3s; */
 }
 
 html,
@@ -134,4 +134,32 @@ body {
 
 .controlsB {
   right: 100px;
+}
+.arrow {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: grey;
+  border: 3px dashed black;
+  border-radius: 100%;
+  z-index: 10;
+  display: none;
+}
+
+.health {
+  width: 80px;
+  position: relative;
+  bottom: 20px;
+  right: 10px;
+  border: 1px solid #000;
+  background-color: red;
+}
+#vins {
+  position: fixed;
+  top: 20px;
+  left: center;
+  border: 10px ridge blue;
+  background-color: aliceblue;
+  padding: 10px;
+  font-size: 30px;
 }
