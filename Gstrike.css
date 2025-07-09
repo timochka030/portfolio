@@ -55,7 +55,7 @@ body {
 }
 
 .land {
-  width: 1200px;
+  width: 900px;
   height: 700px;
   padding: 20px;
   background-color: rgb(213, 181, 181);
@@ -161,6 +161,7 @@ body {
   border: 10px ridge blue;
   background-color: aliceblue;
   padding: 10px;
+  height: 30px;
   /* margin: 20px; */
   font-size: 30px;
 }
