@@ -56,7 +56,7 @@ body {
 
 .land {
   width: 1200px;
-  height: 800px;
+  height: 700px;
   padding: 20px;
   background-color: rgb(213, 181, 181);
   display: flex;
@@ -112,7 +112,7 @@ body {
   height: 90px;
   right: 20px;
   width: 50px;
-  bottom: 0px;
+  bottom: 200px;
 }
 
 .controls {
@@ -155,11 +155,12 @@ body {
   background-color: red;
 }
 #vins {
-  position: fixed;
-  top: 20px;
-  left: center;
+  /* position: absolute;
+  top: 100px;
+  left: 20px; */
   border: 10px ridge blue;
   background-color: aliceblue;
   padding: 10px;
+  /* margin: 20px; */
   font-size: 30px;
 }
